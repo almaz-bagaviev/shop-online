@@ -1,0 +1,12 @@
+﻿global using System;
+global using System.IO;
+global using System.Data;
+global using System.Data.SqlClient;
+global using System.Diagnostics;
+global using System.Windows;
+global using System.Windows.Controls;
+global using ShopOnline.Interfaces;
+global using ShopOnline.Models;
+global using ShopOnline.Views;
+global using ShopOnline.ViewModels;
+global using ShopOnline.Models.Connections;
