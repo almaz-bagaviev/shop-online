@@ -5,3 +5,5 @@
 После чего указать сроку подключения в Model/Connections/SqlCon.cs.
 
 Из SqlRequests.sql выполнить команды для создания таблиц и их заполнения.
+
+Необходимо установить пакеты System.Data.SqlClient
