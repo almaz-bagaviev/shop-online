@@ -11,8 +11,8 @@ public class DataAdapterCommand
 
     private void InsertCommandParametersAdd()
     {
-        dataAdapter.InsertCommand.Parameters.Add("@Id", SqlDbType.Int, 4, "Id").
-        Direction = ParameterDirection.Output;
+        dataAdapter.InsertCommand.Parameters.Add("@Id", SqlDbType.Int, 4, "Id")
+            .Direction = ParameterDirection.Output;
         dataAdapter.InsertCommand.Parameters.Add("@LastName", SqlDbType.NVarChar, 100, "LastName");
         dataAdapter.InsertCommand.Parameters.Add("@FirstName", SqlDbType.NVarChar, 30, "FirstName");
         dataAdapter.InsertCommand.Parameters.Add("@MiddleName", SqlDbType.NVarChar, 30, "MiddleName");
@@ -22,8 +22,8 @@ public class DataAdapterCommand
 
     private void UpdateCommandParametersAdd()
     {
-        dataAdapter.UpdateCommand.Parameters.Add("@Id", SqlDbType.Int, 4, "Id").
-        SourceVersion = DataRowVersion.Original;
+        dataAdapter.UpdateCommand.Parameters.Add("@Id", SqlDbType.Int, 4, "Id")
+            .SourceVersion = DataRowVersion.Original;
         dataAdapter.UpdateCommand.Parameters.Add("@LastName", SqlDbType.NVarChar, 100, "LastName");
         dataAdapter.UpdateCommand.Parameters.Add("@FirstName", SqlDbType.NVarChar, 30, "FirstName");
         dataAdapter.UpdateCommand.Parameters.Add("@MiddleName", SqlDbType.NVarChar, 30, "MiddleName");

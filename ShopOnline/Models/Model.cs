@@ -39,7 +39,7 @@ public class Model
 
 
             dataAdapter.DeleteCommand = new SqlCommand(commands.DeleteSQL(), connection);
-            dataAdapter.DeleteCommand.Parameters.Add("@Id", SqlDbType.Int, 4, "Id");
+            dataAdapterCommand.Data(Params.Delete);
 
             dataAdapter.Fill(dataTable);
             dataGrid.DataContext = dataTable.DefaultView;
