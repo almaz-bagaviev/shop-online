@@ -7,21 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddNewClientWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\FullTableWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\AddNewClientWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\FullTableWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

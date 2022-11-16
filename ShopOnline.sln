@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnline", "ShopOnline\ShopOnline.csproj", "{7B43D5E7-BA07-427D-B168-DBD5EE0FFF18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopOnline", "ShopOnline\ShopOnline.csproj", "{7B43D5E7-BA07-427D-B168-DBD5EE0FFF18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterLibrary", "ConverterLibrary\ConverterLibrary.csproj", "{B4918451-FB3B-48A8-ABE2-58864E571487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterTest", "ConverterTest\ConverterTest.csproj", "{DA8589FC-EEC8-46B0-A427-BF5543E87722}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7B43D5E7-BA07-427D-B168-DBD5EE0FFF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B43D5E7-BA07-427D-B168-DBD5EE0FFF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B43D5E7-BA07-427D-B168-DBD5EE0FFF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4918451-FB3B-48A8-ABE2-58864E571487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4918451-FB3B-48A8-ABE2-58864E571487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4918451-FB3B-48A8-ABE2-58864E571487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4918451-FB3B-48A8-ABE2-58864E571487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8589FC-EEC8-46B0-A427-BF5543E87722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8589FC-EEC8-46B0-A427-BF5543E87722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8589FC-EEC8-46B0-A427-BF5543E87722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8589FC-EEC8-46B0-A427-BF5543E87722}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

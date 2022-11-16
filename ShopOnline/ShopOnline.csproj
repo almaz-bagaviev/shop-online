@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <None Remove="Shop.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConverterLibrary\ConverterLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Shop.svg" />
   </ItemGroup>
 
 </Project>
