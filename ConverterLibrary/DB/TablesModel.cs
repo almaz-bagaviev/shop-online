@@ -32,8 +32,8 @@ public class TablesModel
         string s = GetOrder.LastName;
         Debug.WriteLine(s);
 
-        string id = @$"select Client.Id from Client
-                        where Client.LastName=N'{GetOrder.LastName}'";
+        string id = @"select Client.Id from Client
+                        where Client.LastName=N'" + GetOrder.LastName + "'";
         SqlCommand idcmd = new SqlCommand(id, Connection);
         int number = int.Parse(idcmd.ExecuteScalar().ToString());
         Debug.WriteLine(number);
@@ -97,7 +97,7 @@ public class TablesModel
 
     private string CheckTableValue(Tables tables)
     {
-        string check = @$"select s.id from sysobjects s where xtype='U' and s.name='" + tables + "'";
+        string check = @"select s.id from sysobjects s where xtype='U' and s.name='" + tables + "'";
         Debug.WriteLine(check);
         return check;
     }
@@ -128,7 +128,7 @@ public class TablesModel
 
     private void InsertIntoLocationTable()
     {
-        string addToLocationTable = @"insert into Location values(N'" + GetOrder.Country + "', N'" + GetOrder.City + "', " + this.clientId + "')";
+        string addToLocationTable = @"insert into Location values(N'" + GetOrder.Country + "', N'" + GetOrder.City + "', " + this.clientId + ")";
         SqlCommand locationCmd = new SqlCommand(addToLocationTable, this.Connection);
         locationCmd.ExecuteNonQuery();
         Debug.WriteLine("InsertIntoLocationTable is Done");
@@ -136,7 +136,7 @@ public class TablesModel
 
     private void InsertIntoContactsTable()
     {
-        string addToContactsTable = @"insert into Contacts values('" + GetOrder.Phone + "', '" + GetOrder.Email + "', " + this.clientId + "')";
+        string addToContactsTable = @"insert into Contacts values('" + GetOrder.Phone + "', '" + GetOrder.Email + "', " + this.clientId + ")";
         SqlCommand contactsCmd = new SqlCommand(addToContactsTable, this.Connection);
         contactsCmd.ExecuteNonQuery();
         Debug.WriteLine("InsertIntoContactsTable is Done");
