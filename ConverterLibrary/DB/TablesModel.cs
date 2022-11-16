@@ -5,7 +5,6 @@ public class TablesModel
     public SqlConnectionStringBuilder ConnectionStringBuilder { get; set; }
     public SqlConnection Connection { get; set; }
     public Order GetOrder { get; set; }
-    public List<Order> ListOrders { get; set; }
     int clientId;
     public TablesModel(SqlConnectionStringBuilder sqlConnectionStringBuilder,
                         SqlConnection sqlConnection,
@@ -24,7 +23,6 @@ public class TablesModel
         InsertIntoLocationTable();
         InsertIntoContactsTable();
         InsertIntoOrderTable();
-        SelectAllLines();
     }
 
     private int GetClientId()
@@ -150,40 +148,5 @@ public class TablesModel
             + this.clientId + ", N'" + GetOrder.Product + "', " + count + ")";
         SqlCommand orderCommand = new SqlCommand(addToOrderTable, this.Connection);
         orderCommand.ExecuteNonQuery();
-    }
-
-    private SqlDataReader SelectAllLines()
-    {
-        string allLines = @"select c.LastName, c.FirstName, c.MiddleName,
-                                l.Country, l.City,
-                                ct.Phone, ct.Email,
-                                o.Number, o.[Date], o.Product, o.[Count]
-                                from Client c
-                                left join [Location] l on c.Id=l.ClientId
-                                left join Contacts ct on c.Id=ct.ClientId
-                                left join [Order] o on c.Id=o.ClientId
-                                where c.LastName = N'" + GetOrder.LastName + "'";
-
-        SqlCommand selectCmd = new SqlCommand(allLines, this.Connection);
-        SqlDataReader reader = selectCmd.ExecuteReader();
-        return reader;
-    }
-
-    public Order GetOrders()
-    {
-        SqlDataReader reader = SelectAllLines();
-        Order order = new(reader[0].ToString(),
-            reader[1].ToString(),
-            reader[2].ToString(),
-            reader[3].ToString(),
-            reader[4].ToString(),
-            reader[5].ToString(),
-            reader[6].ToString(),
-            reader.GetInt32(7),
-            reader.GetDateTime(8),
-            reader[9].ToString(),
-            reader.GetDecimal(10));
-
-        return order;
     }
 }

@@ -24,7 +24,6 @@ public class OrderDbConnection
         {
             sqlConnection.Open();
             TablesModel.TableApplication();
-            TablesModel.ListOrders.Add(TablesModel.GetOrders());
         }
         catch (Exception e)
         {
