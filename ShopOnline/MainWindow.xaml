@@ -5,72 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopOnline"
         mc:Ignorable="d"
-        Title="Клиенты Онлайн-Магазина" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
-    
+Title="Магазин" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="Shop.svg">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="577*"/>
-            <ColumnDefinition Width="215*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0"
-                  Grid.Column="0"
-                  x:Name="mainDataGrid"
-                  IsSynchronizedWithCurrentItem="True"
-                  SelectionMode="Single"
-                  AutoGenerateColumns="False"
-                  ItemsSource="{Binding}"
-                  IsReadOnly="False"
-                  CurrentCellChanged="DataGrid_CurrentCellChanged"
-                  CellEditEnding="DataGrid_CellEditEnding"
-                  >
-            
-            <DataGrid.Columns>
-                <DataGridTextColumn x:Name="id"
-                                    Binding="{Binding Id}"
-                                    Header="Id"
-                                    />
+        <TextBlock Text="Заказы клиентов"
+                   FontSize="22"
+                   FontFamily="Arial Rounded MT Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="#FF006ED4"/>
 
-                <DataGridTextColumn x:Name="lastName"
-                                    Binding="{Binding LastName}"
-                                    Header="Фамилия"
-                                    />
-                <DataGridTextColumn x:Name="firstName"
-                                    Binding="{Binding FirstName}"
-                                    Header="Имя"
-                                    />
-                <DataGridTextColumn x:Name="middleName"
-                                    Binding="{Binding MiddleName}"
-                                    Header="Отчество"
-                                    />
-                <DataGridTextColumn x:Name="phone"
-                                    Binding="{Binding Phone}"
-                                    Header="Номер телефона"
-                                    />
-                <DataGridTextColumn x:Name="email"
-                                    Binding="{Binding Email}"
-                                    Header="Email"
-                                    />
-            </DataGrid.Columns>
+        <ListBox x:Name="OrdersListBox" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10">
+                        <TextBlock Text="{Binding LastName}"/>
+                        <TextBlock Text="{Binding FirstName}"/>
+                        <TextBlock Text="{Binding MiddleName}"/>
+                        <TextBlock Text="{Binding Country}"/>
+                        <TextBlock Text="{Binding City}"/>
+                        <TextBlock Text="{Binding Phone}"/>
+                        <TextBlock Text="{Binding Email}"/>
+                        <TextBlock Text="{Binding NumberOfOrders}"/>
+                        <TextBlock Text="{Binding Date}"/>
+                        <TextBlock Text="{Binding Product}"/>
+                        <TextBlock Text="{Binding Count}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-            <DataGrid.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="Добавить нового клиента" Click="MenuItemAddClick"/>
-                    <MenuItem Header="Удалить клиента" Click="MenuItemRemoveClick"/>
-                </ContextMenu>
-            </DataGrid.ContextMenu>
-
-        </DataGrid>
-
-        <StackPanel Grid.Row="0" Grid.Column="1">
-            <Button Content="Полная таблица"
-                    Background="White"
-                    Foreground="Black"
-                    FontSize="15"
-                    Margin="3,25" Height="42"
-                    Click="FullTable_Click"                  
-                    />
-        </StackPanel>
     </Grid>
 </Window>
+
