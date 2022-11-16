@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Order>
+	<Client>
+		<LastName>Соколов</LastName>
+		<FirstName>Максим</FirstName>
+		<MiddleName>Петрович</MiddleName>
+		<Country>Россия</Country>
+		<City>Мурманск</City>
+		<Phone>555-91-74</Phone>
+		<Email>sokolov@gmail.com</Email>
+		<NumberOfOrder>745</NumberOfOrder>
+		<Date>2022-11-10 15:14:00</Date>
+		<Product>Свежемороженые овощи</Product>
+		<Count>5,7</Count>
+	</Client>
+</Order>

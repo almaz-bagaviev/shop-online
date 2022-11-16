@@ -1,0 +1,17 @@
+{
+  "Order": {
+    "Client": {
+      "LastName": "Мамаева",
+      "FirstName": "Олеся",
+      "MiddleName": "Александровна",
+      "Country": "Россия",
+      "City": "Хабаровск",
+      "Phone": "44-74-85",
+      "Email": "xab@mail.ru",
+      "NumberOfOrder": "604",
+      "Date": "11.11.2022 17:00:30",
+      "Product": "Краб",
+      "Count": "10,6"
+    }
+  }
+}
